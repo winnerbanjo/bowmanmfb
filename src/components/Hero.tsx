@@ -35,7 +35,6 @@ export function Hero() {
     >
       <div className="w-full max-w-7xl mx-auto px-6 py-20 lg:py-28">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-          {/* Left: Text */}
           <div className="flex flex-col justify-center">
             <motion.h1
               id="hero-heading"
@@ -78,7 +77,6 @@ export function Hero() {
             </motion.div>
           </div>
 
-          {/* Right: Single square with cross-fade slideshow + floating animation */}
           <motion.div
             initial={{ opacity: 0, x: 24 }}
             animate={{ opacity: 1, x: 0 }}

@@ -92,7 +92,6 @@ export function Services() {
                   <div className="rounded-xl bg-[#003566]/10 p-3 shrink-0">
                     <Icon className="h-6 w-6 text-[#003566]" aria-hidden />
                   </div>
-                  {/* Thumbnail: add image to /public/services/[slug].png and render with next/image object-cover rounded-2xl */}
                   <div className="w-16 h-16 rounded-2xl overflow-hidden bg-[#003566]/5 shrink-0" aria-hidden />
                 </div>
                 <h3 className="mt-4 text-lg font-bold text-[#003566] group-hover:underline">

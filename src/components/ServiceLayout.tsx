@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
-import { Breadcrumb } from "@/components/Breadcrumb";
+import { Breadcrumb } from "./Breadcrumb";
 import { ArrowRight } from "lucide-react";
 
 type BreadcrumbItem = { label: string; href?: string };
@@ -13,7 +13,6 @@ type ServiceLayoutProps = {
   children: React.ReactNode;
   ctaText?: string;
   ctaHref?: string;
-  /** Deep Blue hero with white title for high contrast */
   heroVariant?: "default" | "dark";
 };
 
