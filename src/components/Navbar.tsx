@@ -8,7 +8,7 @@ const navLinks = [
   { href: "#contact", label: "Contact" },
 ];
 
-export default function Navbar() {
+export function Navbar() {
   return (
     <nav
       className="fixed top-6 left-1/2 -translate-x-1/2 w-[90%] max-w-[1200px] z-50 
