@@ -12,7 +12,7 @@ const navLinks = [
   { href: "#why-bowman", label: "Why Bowman" },
 ];
 
-export function Navbar() {
+export const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const closeMenu = () => setMobileOpen(false);
@@ -91,4 +91,4 @@ export function Navbar() {
       </div>
     </header>
   );
-}
+};
