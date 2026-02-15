@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --deep-blue: #003566;
+  --glass-bg: rgba(255, 255, 255, 0.4);
+  --glass-border: rgba(0, 53, 102, 0.1);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #ffffff;
+  color: #003566;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Subtle radial gradient in corners for depth */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(
+      ellipse 80% 50% at 0% 0%,
+      rgba(224, 242, 254, 0.4) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      ellipse 60% 40% at 100% 0%,
+      rgba(224, 242, 254, 0.3) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      ellipse 70% 50% at 100% 100%,
+      rgba(224, 242, 254, 0.25) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      ellipse 60% 40% at 0% 100%,
+      rgba(224, 242, 254, 0.3) 0%,
+      transparent 50%
+    );
+  z-index: 0;
+}
+
+/* Typography hierarchy: Big Bold Headings, Medium Subheadings, Smaller Body */
+@layer components {
+  .glass {
+    @apply bg-white/40 backdrop-blur-md border border-[#003566]/10 shadow-xl shadow-blue-900/5;
+  }
+  .glass-card {
+    @apply glass rounded-2xl p-6 transition-all duration-300 ease-out;
+  }
+  .headline {
+    @apply text-[#003566] tracking-tighter font-bold;
+  }
+  .subheading {
+    @apply text-[#003566] font-medium;
+  }
+  .body-text {
+    @apply text-[#003566]/90 text-base;
+  }
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-[#003566] text-white font-medium px-6 py-3 transition-all duration-300 ease-out hover:bg-[#002a4d] hover:scale-[1.02] active:scale-[0.98];
+  }
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-[#003566]/20 bg-transparent text-[#003566] font-medium px-6 py-3 transition-all duration-300 ease-out hover:bg-[#003566]/5 hover:scale-[1.02] active:scale-[0.98];
+  }
+  .btn-glow:hover {
+    box-shadow: 0 0 28px rgba(0, 53, 102, 0.35);
+  }
+  .btn-glow-outline:hover {
+    box-shadow: 0 0 20px rgba(0, 53, 102, 0.2);
+  }
+}

@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-base: #000814;
+  --primary-blue: #003566;
+  --accent-blue: #0077b6;
+  --deep-blue: #001d3d;
+}
+
+@layer base {
+  body {
+    @apply antialiased;
+  }
+}
+
+/* Glass-Primary CTA button style - solid blue with backdrop-blur and 3D glass look */
+@layer components {
+  .btn-glass-primary {
+    @apply px-6 py-3 rounded-full text-sm font-semibold text-white;
+    background-color: #003566;
+    backdrop-filter: blur(12px);
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 20px rgba(0, 53, 102, 0.4);
+    transition: all 0.3s ease;
+  }
+  .btn-glass-primary:hover {
+    background-color: #004074;
+    box-shadow: 0 0 25px rgba(0, 53, 102, 0.5);
+  }
+}
+
+/* Mesh gradient background - underwater glass feel with deep blues */
+.mesh-gradient {
+  background-color: var(--bg-base);
+  background-image: 
+    radial-gradient(at 40% 20%, rgba(0, 53, 102, 0.3) 0px, transparent 50%),
+    radial-gradient(at 80% 0%, rgba(0, 29, 61, 0.35) 0px, transparent 50%),
+    radial-gradient(at 0% 50%, rgba(0, 119, 182, 0.15) 0px, transparent 50%),
+    radial-gradient(at 80% 50%, rgba(0, 53, 102, 0.2) 0px, transparent 50%),
+    radial-gradient(at 0% 100%, rgba(0, 29, 61, 0.25) 0px, transparent 50%);
+}
