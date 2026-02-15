@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { BrandLogo } from "@/components/BrandLogo";
 
 const navLinks = [
   { href: "#services", label: "Services" },
@@ -8,17 +9,14 @@ const navLinks = [
   { href: "#contact", label: "Contact" },
 ];
 
-export function Navbar() {
-  return (
-    <nav
-      className="fixed top-6 left-1/2 -translate-x-1/2 w-[90%] max-w-[1200px] z-50 
-        backdrop-blur-xl bg-blue-950/20 border border-white/10 rounded-full px-8 py-4 
-        flex items-center justify-between"
-    >
-      {/* Logo */}
-      <Link href="/" className="text-white font-bold text-xl tracking-tight">
-        BOWMAN
-      </Link>
+export const Navbar = () => (
+  <nav
+    className="fixed top-6 left-1/2 -translate-x-1/2 w-[90%] max-w-[1200px] z-50 
+      backdrop-blur-xl bg-blue-950/20 border border-white/10 rounded-full px-8 py-4 
+      flex items-center justify-between"
+  >
+    {/* Logo + BOWMAN MFB */}
+    <BrandLogo className="shrink-0" />
 
       {/* Center nav links */}
       <div className="hidden md:flex items-center gap-8">
@@ -43,6 +41,5 @@ export function Navbar() {
       >
         Get Started
       </Link>
-    </nav>
-  );
-}
+  </nav>
+);
