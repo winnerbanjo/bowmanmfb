@@ -20,9 +20,9 @@ const services = [
 
 const company = [
   { label: "About Us", href: "/#about" },
-  { label: "Careers", href: "#" },
-  { label: "Press", href: "#" },
-  { label: "News", href: "#" },
+  { label: "Privacy Policy", href: "/privacy-policy" },
+  { label: "Terms & Conditions", href: "/terms-and-conditions" },
+  { label: "Contact", href: "mailto:info@bowmanmfb.com.ng" },
 ];
 
 const contact = {
